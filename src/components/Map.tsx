@@ -70,7 +70,8 @@ const Map: React.FC<MapProps> = ({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/satellite-streets-v12',
         center: [initialCenter.longitude, initialCenter.latitude], // Use initialCenter
-        zoom: 12, // Adjust zoom level for Bangkok
+        zoom: 12, 
+        projection: 'globe',
       });
 
       map.current.on('click', handleMapClick);
